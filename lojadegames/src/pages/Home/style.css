@@ -15,10 +15,5 @@ html,body{
 
 .dir{
   background-image: url('../../assets/sekiro_banner.jpg');
-}
-
-@media screen and (max-width: 800px){
-  .banner{
-    background-image: url('../../assets/principal_banner_mobile.jpg');
-  }
+  
 }

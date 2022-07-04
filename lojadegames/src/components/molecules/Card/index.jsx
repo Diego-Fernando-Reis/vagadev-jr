@@ -11,7 +11,7 @@ function Card (props) {
         <div className="sub">
           <Minititulo name={props.nameCard}/>
           <Preco preco={props.precoCard}/>
-          <Button valor='COMPRAR' click={props.click}/>
+          <Button valor='COMPRAR' click={props.click} id={props.id} />
         </div>
       </div>
     </>

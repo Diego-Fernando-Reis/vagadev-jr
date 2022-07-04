@@ -43,7 +43,6 @@ function Home (props) {
     setValorCarrinho(valorCarrinho + 1 )
     let element = document.getElementById("popup");
     element.style.display = 'block'
-    
   }
 
   function fecharPopup(){
@@ -51,6 +50,16 @@ function Home (props) {
     element.style.display = 'none'
   }
   
+  function abrirContato(){
+    let el = document.getElementById("contato");
+    el.style.display = 'block'
+  }
+
+  function fecharContato(){
+    let el = document.getElementById("contato");
+    el.style.display = 'none'
+  }
+
 
   let i='';
   let subtitulo = slide[0].subtitulo;
@@ -77,6 +86,18 @@ function Home (props) {
     <ThemeProvider theme={i} >
     <Estilizacao>
     <body>
+      <div className="contato" id="contato">
+        
+        <form action="">
+          <p onClick={fecharContato}>X</p>
+          <div className="title">
+            <h2>Fale Conosco</h2>
+          </div>
+          <input type="text" placeholder="Nome" />
+          <input type="text" placeholder="Email"/>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
+        </form>
+      </div>
       <div className="compra-realizada" id={popup}>
         <Popup click={fecharPopup}/>
       </div>
@@ -91,7 +112,7 @@ function Home (props) {
       <div className="banner">
         <div className="conteudo">
           <div className="menu">
-            <Menu click2={onClick} valor={valorCarrinho}/>
+            <Menu click2={onClick} valor={valorCarrinho} click={abrirContato}/>
           </div>
           <div ref={dropDownRef} className={`menuhamburguer ${isActive ? 'active' : 'inactive'}`}>
             <div className="classeSubmenu" >

@@ -14,7 +14,7 @@ function Menu (props) {
             <Logo />
           </div>
           <div className="bloco dois">
-            <Link endereco={Paper} nome='Contato'/>
+            <Link endereco={Paper} nome='Contato' click={props.click}/>
             <Link endereco={Search} nome='Buscar'/>
             <div className="carrinho">
               <img src={Bag} id='bag' alt="" />

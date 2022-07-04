@@ -24,6 +24,64 @@ export const Estilizacao = styled.div`
     display: block;
   }
 
+  .contato{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.811);
+    z-index: 9999;
+    display: none;
+    p{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      color: #F5F5F5;
+      background-color: #f55959;
+      text-align: center;
+      top: 5%;
+      right: 2%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+      cursor: pointer;
+    }
+    form{
+      max-width: 400px;
+      margin: 0 auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #084154;
+      border: 3px solid #3EC6E0;
+      color: white;
+      padding: 100px 50px;
+      border-radius: 10px;
+      .title{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      input{
+        width: 100%;
+        background-color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+
+      }
+      input:focus{
+        border: 1px solid #3EC6E0;
+      }
+      textarea{
+        width: 100%;
+        padding: 10px;
+        resize: none;
+      }
+    }
+  }
+
   .compra-realizada{
     width: 100vw;
     height: 100vh;
@@ -63,10 +121,17 @@ export const Estilizacao = styled.div`
           font-size: 20px;
           width: 150px;
           text-align: center;
-          margin: 0 auto;
+          position: absolute;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
       }
       img{
         width: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
       }
     }
   }
@@ -252,16 +317,19 @@ export const Estilizacao = styled.div`
         text-align: right;
         h1{
           margin-top: 60px;
+          text-shadow: 0.1em 0.1em #333
         }
 
         h2{
           font-size: 40px;
           color: #3EC6E0;
           margin-bottom: 15px;
+          text-shadow: 0.1em 0.1em #333
         }
 
         p{
           font-size: 12px;
+          text-shadow: 0.1em 0.2em #000
         }
       }
     }
@@ -371,6 +439,23 @@ export const Estilizacao = styled.div`
       overflow-x: auto;
       scroll-behavior: smooth;
       width: 100%;
+      .rec-pagination{
+          display: none !important;
+        }
+        .rec-carousel{
+          button:hover{
+            background-color: #084154;
+            color: white;
+          }
+          button:active{
+            background-color: #084154;
+            color: white;
+          }
+          button:focus{
+            background-color: #084154;
+            color: white;
+          }
+        }
       .card{
         margin: 20px 0;
         border-radius: 10px;
@@ -380,6 +465,7 @@ export const Estilizacao = styled.div`
         img{
           width: 250px;
         }
+        
         .sub{
           padding: 0 30px;
           padding-top: 20px;
@@ -485,6 +571,7 @@ export const Estilizacao = styled.div`
 
 
   @media screen and (max-width: 800px){
+
     .botoesSlide{
       top: 520px;
       height: 50px;
@@ -521,6 +608,7 @@ export const Estilizacao = styled.div`
     .banner{
       padding-top: 10px;
       padding-bottom: 0;
+      background-image: url(${props=>props.theme.main2});
       .divisao{
         display: block;
         .esquerda{
@@ -573,9 +661,11 @@ export const Estilizacao = styled.div`
 
 
 export const theme = {
-  main: slide[1].imagem
+  main: slide[1].imagem,
+  main2: slide[1].responsivo
 }
 
 export const theme2 ={
-  main: slide[0].imagem
+  main: slide[0].imagem,
+  main2: slide[0].responsivo
 }
