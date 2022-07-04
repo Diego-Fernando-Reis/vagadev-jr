@@ -1,7 +1,7 @@
-function Fechar () {
+function Fechar (props) {
   return (
     <div className="box">
-      <p>X</p>
+      <p onClick={props.click}>X</p>
     </div>
   );
 }

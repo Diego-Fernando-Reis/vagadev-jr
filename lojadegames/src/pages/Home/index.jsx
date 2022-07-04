@@ -16,7 +16,6 @@ import {ThemeProvider} from "styled-components"
 import {slide} from '../../components/molecules/Slider/Dados'
 
 
-
 function Home (props) {
   const dropDownRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
@@ -38,7 +37,6 @@ function Home (props) {
       setValor(valor + 1 )
     }
   }
-
   
   let [valorCarrinho, setValorCarrinho] = useState(0);
   function funcAumentarCarrinho(){
@@ -47,6 +45,12 @@ function Home (props) {
     element.style.display = 'block'
     
   }
+
+  function fecharPopup(){
+    let element = document.getElementById("popup");
+    element.style.display = 'none'
+  }
+  
 
   let i='';
   let subtitulo = slide[0].subtitulo;
@@ -74,7 +78,7 @@ function Home (props) {
     <Estilizacao>
     <body>
       <div className="compra-realizada" id={popup}>
-        <Popup />
+        <Popup click={fecharPopup}/>
       </div>
       <div className="botoesSlide">
             <span style={{ textTransform: 'uppercase'}}>{(titulo)}</span>
@@ -126,7 +130,7 @@ function Home (props) {
       <div className="destaque">
         <div className="conteudo">
           <div className="title">
-            <div className="quadrado">
+            <div className="quadrados">
               <Square />
               <Square />
               <Square />

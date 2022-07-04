@@ -4,10 +4,10 @@ import Minititulo from "../../atoms/Minititulo";
 import mario from '../../../assets/mario.png';
 
 
-function Popup () {
+function Popup (props) {
   return (
     <div className="popup">
-      <Fechar />
+      <Fechar click={props.click}/>
       <Minititulo name='Pedido realizado com sucesso!'/>
       <Miniimagem endereco={mario}/>
     </div>

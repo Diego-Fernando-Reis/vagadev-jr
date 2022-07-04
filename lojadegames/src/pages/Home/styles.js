@@ -54,7 +54,7 @@ export const Estilizacao = styled.div`
           position: absolute;
           top: 50%;
           left: 50%;
-          
+          cursor: pointer;
           transform: translate(-50%, -50%);
         }
         
@@ -353,7 +353,12 @@ export const Estilizacao = styled.div`
   .destaque{
     padding-bottom: 100px;
     .title{
+      display: flex;
       margin-top: 50px;
+      .quadrados{
+        margin-top: 10px;
+        margin-right: 2px;
+      }
       h2{
         font-weight: 350;
         color: #084154;
@@ -433,7 +438,7 @@ export const Estilizacao = styled.div`
 
   @media screen and (max-width: 1100px){
     .menu{
-      padding: 0 50px;
+      padding: 0 30px;
     }
     .secao{
       padding-top: 20px;
@@ -468,7 +473,16 @@ export const Estilizacao = styled.div`
           }
         }
       }
+
+    .destaque{
+      .title{
+        .quadrados{
+          margin-left: 10px;
+        }
+      }
+    }
   }
+
 
   @media screen and (max-width: 800px){
     .botoesSlide{
@@ -502,16 +516,7 @@ export const Estilizacao = styled.div`
           
         }
       }
-    }
-
-    .submenu{
-      width: 100vw;
-      height: 100vh;
-    }
-
-    .compra-realizada{
-      display: none;
-    }
+    }    
 
     .banner{
       padding-top: 10px;
@@ -554,6 +559,7 @@ export const Estilizacao = styled.div`
           display: none;
         }
       }
+      
     }
   }
   
